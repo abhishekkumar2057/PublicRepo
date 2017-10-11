@@ -4,3 +4,5 @@ file/target/classes/*
 file/.classpath
 CodeGladiator/target/classes/*
 CodeGladiator/target/test-classes/*
+multiproblems/target/classes/*
+multiproblems/target/test-classes/*
