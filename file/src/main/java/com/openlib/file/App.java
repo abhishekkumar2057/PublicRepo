@@ -14,11 +14,37 @@ import com.openlib.file.job.ReaderJob;
  */
 
 public class App {
+	
+	private Queue<String> resource1;
+	private Queue<String> resource2;
+	private Queue<String> resource3;
+	private Queue<String> resource4;
+	private Queue<String> resource5;
+	
+	private static File file;
+	
+	public App() {
+		super();
+		
+		resource1 = new LinkedBlockingQueue<>();
+		resource2 = new LinkedBlockingQueue<>();
+		resource3 = new LinkedBlockingQueue<>();
+		resource4 = new LinkedBlockingQueue<>();
+		resource5 = new LinkedBlockingQueue<>();
+		
+		file = new File("D://poc.log");
+	}
+	
     public static void main(String[] args ) {
     	
-    	Queue<String> container = new LinkedBlockingQueue<>();
-    	ReaderJob t = new ReaderJob(new File("D://poc.log"),container);
-		new Thread(t).start();
-		System.out.println(container.poll());
+    	new App().threadRun();
     }
+    
+    public void threadRun() {
+		/*Thread t1 = */new Thread(new ReaderJob(file, resource1)).start();
+		/*Thread t2 = */new Thread(new ReaderJob(file, resource2)).start();
+		/*Thread t3 = */new Thread(new ReaderJob(file, resource3)).start();
+		/*Thread t4 = */new Thread(new ReaderJob(file, resource4)).start();
+		/*Thread t5 = */new Thread(new ReaderJob(file, resource5)).start();
+	}
 }

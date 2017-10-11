@@ -8,13 +8,10 @@ import com.openlib.file.task.FileUpdateReaderTask;
 
 public class ReaderJob implements Runnable {
 	
-	File target;
-	Queue<String> container;
-	FileUpdateReaderTask reader;
+	private File target;
+	private Queue<String> container;
 	
-	public ReaderJob() {
-		super();
-	}
+	private FileUpdateReaderTask reader;
 	
 	public ReaderJob(File target, Queue<String> container) {
 		super();
@@ -31,10 +28,4 @@ public class ReaderJob implements Runnable {
 			exception.printStackTrace();
 		}
 	}
-	/*
-	public static void main(String[] args) {
-		ReaderJob t = new ReaderJob(new File("D://poc.log"));
-		new Thread(t).start();
-		System.out.println(t.container.poll());
-	}*/
 }

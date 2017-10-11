@@ -34,10 +34,6 @@ public class FileUpdateReaderTask {
 	// Characters need to be skipped (updated content index) 
 	private long offset;
 	
-	public FileUpdateReaderTask() {
-		super();
-	}
-	
 	public FileUpdateReaderTask(File target) {
 		super();
 		if(target != null) {
@@ -68,7 +64,8 @@ public class FileUpdateReaderTask {
 				reader.skip(counter.get());
 				lock = new ReentrantLock();
 				while(true && lock.tryLock()) {
-					Thread.sleep(1000);
+					// 2 sec. Delay
+					Thread.sleep(2000);
 					long time = System.currentTimeMillis();
 					row = reader.readLine();
 					//count++;
