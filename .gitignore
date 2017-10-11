@@ -2,3 +2,5 @@ file/target/test-classes/com/openlib/file/AppTest.class
 file/target/classes/com/openlib/file/*.class
 file/target/classes/*
 file/.classpath
+CodeGladiator/target/classes/*
+CodeGladiator/target/test-classes/*
