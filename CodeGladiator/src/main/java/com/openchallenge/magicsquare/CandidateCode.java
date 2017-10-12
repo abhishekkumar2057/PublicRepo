@@ -1,14 +1,7 @@
 package com.openchallenge.magicsquare;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Set;
-
 public class CandidateCode {
-
+/*
 	public static int solveMagicSquare(int[][] input1) {
         int res = 0;
         int len = input1[0].length;
@@ -75,19 +68,19 @@ public class CandidateCode {
     	}
     	return arr;
     }
-    /*
+    
     private static int arrayAdder(int[] arr) {
     	int sum = 0;
     	for(int i : arr)
     		sum += i;
     	return sum;
     }
-    */
+    
     private static List<String> setTotList(Set<String> set) {
     	Iterator<String> it = set.iterator();
     	List<String> list = new ArrayList<>();
     	while(it.hasNext())
     		list.add(it.next());
     	return list;
-    }
+    }*/
 }
