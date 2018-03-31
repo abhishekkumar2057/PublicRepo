@@ -32,7 +32,7 @@ public class App {
 		resource4 = new LinkedBlockingQueue<>();
 		resource5 = new LinkedBlockingQueue<>();
 		
-		file = new File("D://poc.log");
+		file = new File("./logs/demo.log");
 	}
 	
     public static void main(String[] args ) {
