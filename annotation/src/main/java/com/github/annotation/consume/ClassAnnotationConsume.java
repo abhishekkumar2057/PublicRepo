@@ -1,8 +1,18 @@
+/**
+ * 
+ * Consumer class definition to demonstrate ClassAnnotation usage
+ * 
+ */
+
 package com.github.annotation.consume;
 
 import com.github.annotation.factory.FactoryObjectCreator;
 import com.github.annotation.target.SingletonObject;
 
+/**
+ * @author Abhishek Kumar
+ *
+ */
 public class ClassAnnotationConsume {
 	
 	public static void main(String[] args) {

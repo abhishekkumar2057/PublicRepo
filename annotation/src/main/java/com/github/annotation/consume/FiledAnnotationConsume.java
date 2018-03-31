@@ -1,3 +1,9 @@
+/**
+ * 
+ * Consumer class definition to demonstrate FieldAnnotation usage
+ * 
+ */
+
 package com.github.annotation.consume;
 
 import java.lang.reflect.Field;
@@ -5,6 +11,10 @@ import java.lang.reflect.Field;
 import com.github.annotation.defs.FieldAnnotation;
 import com.github.annotation.target.TargetClass;
 
+/**
+ * @author Abhishek Kumar
+ *
+ */
 public class FiledAnnotationConsume {
 	
 	public static void main(String[] args) throws Exception {

@@ -1,6 +1,9 @@
 /**
  * 
- * The following implementation 
+ * The Factory pattern implementation for object creation.
+ * The objects must be created only for the project specific classes.
+ * And the object must be created as per the scope passed as annotation.
+ * 
  */
 
 package com.github.annotation.factory;
@@ -16,10 +19,27 @@ import java.util.regex.Pattern;
 import com.github.annotation.defs.ClassAnnotation;
 import com.github.annotation.model.BeanScope;
 
+/**
+ * @author Abhishek Kumar
+ *
+ */
 public class FactoryObjectCreator {
 	
+	/**
+	 * 
+	 * Regular expression to check class is from project, which need to be instantiated
+	 * 
+	 */
 	private static final String REGEX = "com.test.annotations.*";
 	
+	/**
+	 * 
+	 * @param clazz
+	 * @return T
+	 * 
+	 * Public method to get the instance of T type from the factory
+	 * 
+	 */
 	public static <T>T getInstance(Class<T> clazz) {
 		
 		T object = null;
@@ -36,6 +56,13 @@ public class FactoryObjectCreator {
 		return object;
 	}
 	
+	/**
+	 * 
+	 * @param clazz
+	 * @return
+	 * @throws Exception
+	 * 
+	 */
 	@SuppressWarnings("unchecked")
 	private static <T>T singleInstance(Class<T> clazz) throws Exception {
 		
