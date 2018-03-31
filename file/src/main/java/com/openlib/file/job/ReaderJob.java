@@ -6,6 +6,10 @@ import java.util.Queue;
 
 import com.openlib.file.task.FileUpdateReaderTask;
 
+/**
+ * @author Abhishek Kumar
+ *
+ */
 public class ReaderJob implements Runnable {
 	
 	private File target;
